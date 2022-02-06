@@ -1,35 +1,69 @@
 .footer--principal {
   display: flex;
-  height: 160px;
+  height: auto;
   padding: 0 20px 20px 20px;
   margin-top: 30px;
   background-color: $color-primario;
+  flex-direction: column;
+  .logo {
+    width: 100%;
+  }
+  @include media(desktop-s) {
+    height: 160px;
+    flex-direction: row;
+    .logo {
+      width: unset;
+    }
+  }
 }
 .nav--footer ul {
   display: flex;
+  flex-direction: column;
   padding-top: 35px;
+  padding-left: 0;
   li {
     list-style: none;
-    margin-right: 50px;
+    margin-right: 25px;
   }
   a {
-    color: $color-claro;
+    color: get-opacity($color-claro, 0.7);
     @include titulos($Fuente2);
+  }
+  @include media(desktop-s) {
+    flex-direction: row;
+    a {
+      color: $color-claro;
+    }
+    li {
+      margin-right: 50px;
+    }
   }
 }
 .nav--social {
-  margin-left: auto;
+  margin: 0;
   ul {
     display: flex;
     padding-top: 35px;
+    padding-left: 0%;
   }
   li {
     list-style: none;
-    margin-right: 50px;
-    color: $color-claro;
+    margin-right: 20px;
+    color: get-opacity($color-claro, 0.7);
   }
   a {
-    color: $color-claro;
+    color: get-opacity($color-claro, 0.7);
     @include titulos($Fuente2);
+  }
+  @include media(desktop-s) {
+    margin-left: auto;
+    margin-right: unset;
+    li {
+      margin-right: 50px;
+      color: $color-claro;
+    }
+    a {
+      color: $color-claro;
+    }
   }
 }
