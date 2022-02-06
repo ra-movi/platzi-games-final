@@ -992,6 +992,18 @@ main {
   height: 90%;
   border-bottom: 1px solid #ebebeb;
 }
+.header--principal .logo img {
+  width: 100%;
+}
+.header--principal i.fas {
+  display: block;
+  padding: 20px 0 20px 20px;
+}
+@media only screen and (min-width: 992px) {
+  .header--principal {
+    display: none;
+  }
+}
 
 .nav--header ul {
   display: none;
@@ -1046,48 +1058,100 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 160px;
+  height: auto;
   padding: 0 20px 20px 20px;
   margin-top: 30px;
   background-color: #333333;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer--principal .logo {
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .footer--principal {
+    height: 160px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .footer--principal .logo {
+    width: unset;
+  }
 }
 
 .nav--footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 35px;
+  padding-left: 0;
 }
 .nav--footer ul li {
   list-style: none;
-  margin-right: 50px;
+  margin-right: 25px;
 }
 .nav--footer ul a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
+@media only screen and (min-width: 992px) {
+  .nav--footer ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav--footer ul a {
+    color: #fff;
+  }
+  .nav--footer ul li {
+    margin-right: 50px;
+  }
+}
 
 .nav--social {
-  margin-left: auto;
+  margin: 0;
 }
 .nav--social ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 35px;
+  padding-left: 0%;
 }
 .nav--social li {
   list-style: none;
-  margin-right: 50px;
-  color: #fff;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.7);
 }
 .nav--social a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+}
+@media only screen and (min-width: 992px) {
+  .nav--social {
+    margin-left: auto;
+    margin-right: unset;
+  }
+  .nav--social li {
+    margin-right: 50px;
+    color: #fff;
+  }
+  .nav--social a {
+    color: #fff;
+  }
 }
 
 .contenedor--home {
