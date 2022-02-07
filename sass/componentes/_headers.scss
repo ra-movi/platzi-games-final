@@ -10,7 +10,8 @@
   }
   i.fas {
     display: block;
-    padding: 20px 0 20px 20px;
+    padding: 10px 0 10px 10px;
+    @include font-size(30px);
   }
   @include media(desktop-s) {
     display: none;
