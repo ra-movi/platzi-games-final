@@ -12,9 +12,9 @@
     display: block;
     padding: 10px 0 10px 10px;
     @include font-size(30px);
-  }
-  @include media(desktop-s) {
-    display: none;
+    @include media(desktop-s) {
+      display: none;
+    }
   }
 }
 .nav--header ul {
