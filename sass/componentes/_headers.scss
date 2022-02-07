@@ -12,14 +12,27 @@
     display: block;
     padding: 10px 0 10px 10px;
     @include font-size(30px);
+    @include media(tablet) {
+      padding: 20px;
+    }
     @include media(desktop-s) {
       display: none;
     }
   }
+  @include media(tablet) {
+    justify-content: space-between;
+    .logo {
+      width: 50%;
+    }
+  }
 }
-.nav--header ul {
+.nav--header {
   display: none;
-  padding-top: 35px;
+
+  ul {
+    display: none;
+    padding-top: 35px;
+  }
   li {
     list-style: none;
     margin-right: 50px;
@@ -29,7 +42,10 @@
     @include titulos($Fuente2);
   }
   @include media(desktop-s) {
-    display: flex;
+    display: unset;
+    ul {
+      display: flex;
+    }
   }
 }
 .header__busqueda {

@@ -1046,27 +1046,48 @@ main {
   font-size: 1.875rem;
   line-height: 2.8125rem;
 }
+@media only screen and (min-width: 768px) {
+  .header--principal i.fas {
+    padding: 20px;
+  }
+}
 @media only screen and (min-width: 992px) {
   .header--principal i.fas {
     display: none;
   }
 }
+@media only screen and (min-width: 768px) {
+  .header--principal {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header--principal .logo {
+    width: 50%;
+  }
+}
 
+.nav--header {
+  display: none;
+}
 .nav--header ul {
   display: none;
   padding-top: 35px;
 }
-.nav--header ul li {
+.nav--header li {
   list-style: none;
   margin-right: 50px;
 }
-.nav--header ul a {
+.nav--header a {
   color: #3f579a;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
 @media only screen and (min-width: 992px) {
+  .nav--header {
+    display: unset;
+  }
   .nav--header ul {
     display: -webkit-box;
     display: -ms-flexbox;
