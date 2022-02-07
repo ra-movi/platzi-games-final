@@ -1138,13 +1138,19 @@ main {
 .footer--principal .logo {
   width: 100%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .footer--principal {
-    height: 160px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer--principal {
+    height: 160px;
   }
   .footer--principal .logo {
     width: unset;
@@ -1162,27 +1168,35 @@ main {
   padding-top: 35px;
   padding-left: 0;
 }
-.nav--footer ul li {
+.nav--footer li {
   list-style: none;
   margin-right: 25px;
 }
-.nav--footer ul a {
+.nav--footer a {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
+  .nav--footer {
+    margin-right: 30px;
+  }
   .nav--footer ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .nav--footer ul a {
+}
+@media only screen and (min-width: 992px) {
+  .nav--footer {
+    margin-right: unset;
+  }
+  .nav--footer a {
     color: #fff;
   }
-  .nav--footer ul li {
+  .nav--footer li {
     margin-right: 50px;
   }
 }
