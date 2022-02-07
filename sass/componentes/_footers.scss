@@ -8,19 +8,24 @@
   .logo {
     width: 100%;
   }
+  @include media(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   @include media(desktop-s) {
     height: 160px;
-    flex-direction: row;
     .logo {
       width: unset;
     }
   }
 }
-.nav--footer ul {
-  display: flex;
-  flex-direction: column;
-  padding-top: 35px;
-  padding-left: 0;
+.nav--footer {
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    padding-left: 0;
+  }
   li {
     list-style: none;
     margin-right: 25px;
@@ -29,8 +34,16 @@
     color: get-opacity($color-claro, 0.7);
     @include titulos($Fuente2);
   }
+
+  @include media(tablet) {
+    margin-right: 30px;
+    ul {
+      flex-direction: row;
+    }
+  }
+
   @include media(desktop-s) {
-    flex-direction: row;
+    margin-right: unset;
     a {
       color: $color-claro;
     }
