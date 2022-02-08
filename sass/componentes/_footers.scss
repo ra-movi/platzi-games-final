@@ -1,21 +1,27 @@
 .footer--principal {
-  display: flex;
-  height: auto;
-  padding: 0 20px 20px 20px;
   margin-top: 30px;
   background-color: $color-primario;
-  flex-direction: column;
-  .logo {
-    width: 100%;
-  }
-  @include media(tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  @include media(desktop-s) {
-    height: 160px;
+
+  .wrapper {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+
     .logo {
-      width: unset;
+      width: 100%;
+    }
+    @include media(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include media(desktop-s) {
+      max-width: 1300px;
+      height: 160px;
+      margin: 0 auto;
+      .logo {
+        width: unset;
+      }
     }
   }
 }
