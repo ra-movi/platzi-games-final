@@ -47,8 +47,6 @@
     height: 100%;
     object-fit: cover;
     @include media(desktop-s) {
-      max-width: 100%;
-      max-height: auto;
       width: unset;
       height: unset;
       object-fit: contain;
@@ -62,12 +60,12 @@
     p {
       color: $color-claro;
       display: none;
+      @include media(tablet) {
+        display: unset;
+      }
     }
     h3 {
       color: $color-claro;
-    }
-    @include media(desktop-s) {
-      display: unset;
     }
   }
   &__categoria {

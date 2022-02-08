@@ -42,6 +42,7 @@
   }
 }
 .caja--con-fondo__stats {
+  width: 80%;
   margin: 0 auto;
   position: absolute;
   bottom: 10px;
@@ -51,10 +52,14 @@
   transform: translateX(-50%);
   ul {
     display: flex;
+    justify-content: space-between;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
   }
   li {
     display: flex;
-    margin-right: 50px;
+    // margin-right: 50px;
     opacity: 0.8;
   }
   i {
@@ -62,5 +67,10 @@
   }
   span {
     color: $color-claro;
+  }
+  @include media(tablet) {
+    .caja--grande & {
+      width: 50%;
+    }
   }
 }
